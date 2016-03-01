@@ -1,21 +1,18 @@
 (ns leiningen.ruin
-  (:require [clojire.java.io :as io]
+  (:require [clojure.java.io :as io]
             [clojure.string :as str]))
 
 (defn- enum-files []
   (let [wd (first (seq (.list (io/file "src"))))]
-    (map #(.path %)
+    (map #(.getPath %)
          (filter #(not (.isDirectory %))
                  (seq (.listFiles (io/file (str "src/" wd))))))))
 
 (defn strip-parens [file-string]
-  (str/replace file-string "(\(|\))" ""))
+  (str/replace file-string #"(\(|\)|\[|\])" ""))
 
 (defn ruin
   "I don't do a lot."
   [project & args]
-  (let [files (enum-files)]
-    (for [file files]
-      (spit file (strip-parens (slurp file))))
-    (println "RUIN!"))
-  )
+  (for [f (enum-files)]
+    (spit f (strip-parens (slurp f)))))
