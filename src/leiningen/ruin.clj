@@ -12,7 +12,7 @@
   (str/replace file-string #"(\(|\)|\[|\])" ""))
 
 (defn ruin
-  "I don't do a lot."
+  "Ruin your project."
   [project & args]
-  (for [f (enum-files)]
+  (doseq [f (enum-files)]
     (spit f (strip-parens (slurp f)))))
