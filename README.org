@@ -1,5 +1,8 @@
 * lein-ruin
 
+[[https://clojars.org/lein-ruin][https://img.shields.io/clojars/v/lein-ruin.svg]]
+[[https://jarkeeper.com/canweriotnow/lein-ruin][https://jarkeeper.com/canweriotnow/lein-ruin/status.svg]]
+
 A Leiningen plugin to ruin your project, and your day.
 
 ** Usage
