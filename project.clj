@@ -1,6 +1,6 @@
 (defproject lein-ruin "0.1.0-SNAPSHOT"
-  :description "FIXME: write description"
-  :url "http://example.com/FIXME"
+  :description "A Lein plugin to ruin things."
+  :url "https://github.com/canweriotnow/lein-ruin"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :eval-in-leiningen true)
