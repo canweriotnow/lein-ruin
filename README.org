@@ -5,14 +5,16 @@
 
 A Leiningen plugin to ruin your project, and your day.
 
+Inspired by my tendency to mistype =lein run= as =lein ruin=
+
 ** Usage
 
-Put =[lein-ruin "0.1.0-SNAPSHOT"]= into the =:plugins= vector of your
+Put =[lein-ruin "0.1.1"]= into the =:plugins= vector of your
 =:user= profile.
 
 or, for a single project:
 
-Put =[lein-ruin "0.1.0-SNAPSHOT"]= into the =:plugins= vector of your
+Put =[lein-ruin "0.1.1"]= into the =:plugins= vector of your
 project.clj.
 
 
@@ -21,7 +23,7 @@ project.clj.
 #+END_EXAMPLE
 
 lein-ruin will scrub all parentheses and brackets from your source files,
-ruining everything.
+ruining everything. And commit the changes so you're extra screwed.
 
 ** License
 
