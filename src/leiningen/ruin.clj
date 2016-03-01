@@ -10,7 +10,7 @@
   (map #(.getPath %) (walk "src" #".*\.clj.*")))
 
 (defn strip-parens [file-string]
-  (str/replace file-string #"(\(|\)|\[|\])" ""))
+  (str/replace file-string #"(\(|\)|\[|\]|\{|\})" ""))
 
 (defn ruin
   "Ruin your project."
