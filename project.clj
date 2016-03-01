@@ -1,4 +1,4 @@
-(defproject lein-ruin "0.1.0-SNAPSHOT"
+(defproject lein-ruin "0.1.1-SNAPSHOT"
   :description "A Leiningen plugin to ruin things."
   :url "https://github.com/canweriotnow/lein-ruin"
   :license {:name "Eclipse Public License"
