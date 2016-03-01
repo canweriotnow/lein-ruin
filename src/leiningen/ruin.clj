@@ -2,11 +2,12 @@
   (:require [clojure.java.io :as io]
             [clojure.string :as str]))
 
+(defn- walk [dirpath pattern]
+  (doall (filter #(re-matches pattern (.getName %))
+                 (file-seq (io/file dirpath)))))
+
 (defn- enum-files []
-  (let [wd (first (seq (.list (io/file "src"))))]
-    (map #(.getPath %)
-         (filter #(not (.isDirectory %))
-                 (seq (.listFiles (io/file (str "src/" wd))))))))
+  (map #(.getPath %) (walk "src" #".*\.clj.*")))
 
 (defn strip-parens [file-string]
   (str/replace file-string #"(\(|\)|\[|\])" ""))
